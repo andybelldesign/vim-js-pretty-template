@@ -84,10 +84,11 @@ function! jspretmpl#register_tag(tagname, filetype)
 endfunction
 
 function! jspretmpl#loadAndApply()
-  for k in keys(s:rule_map)
-    call jspretmpl#loadOtherSyntax(k)
-    call jspretmpl#applySyntax(k, s:rule_map[k])
-  endfor
+  call jspretmpl#applySyntax('html', '`');
+  " for k in keys(s:rule_map)
+    " call jspretmpl#loadOtherSyntax(k)
+    " call jspretmpl#applySyntax(k, s:rule_map[k])
+  " endfor
 endfunction
 
 function! jspretmpl#clear()
